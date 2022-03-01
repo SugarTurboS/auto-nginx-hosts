@@ -1,17 +1,17 @@
-# auto-config
+# auto-nginx-hosts
 
 ## 说明
 用于自动启动nginx及hosts
 
 ## 安装
 ```
-npm install auto-config
+npm install auto-nginx-hosts
 ```
 
 ## 使用方式
 ```
-const autoConfig = require('auto-config');
-autoConfig({
+const autoNginxHosts = require('auto-nginx-hosts');
+autoNginxHosts({
   nginxPath: require('path').join(__dirname, 'nginx.conf'), // 配置需要注入的nginx conf地址
   key: 'teacher-web', // 项目唯一key，需要注入nginx时必传
   hosts: [{ ip: '127.0.0.1', domain: 'teacher-dev.test.seewo.com' }], // 配置注入注入的hosts

@@ -1,11 +1,11 @@
 {
-  "name": "auto-config",
-  "version": "1.1.8",
+  "name": "auto-nginx-hosts",
+  "version": "1.0.1",
   "description": "auto inject nginx and hosts",
   "main": "src",
   "repository": {
     "type": "git",
-    "url": "https://github.com/deeWong/auto-config"
+    "url": "https://github.com/deeWong/auto-nginx-hosts"
   },
   "author": "",
   "license": "ISC",
