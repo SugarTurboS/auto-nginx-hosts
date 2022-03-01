@@ -1,0 +1,25 @@
+{
+  "name": "@student/auto-config",
+  "version": "1.1.8",
+  "description": "auto inject nginx and hosts",
+  "main": "src",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.gz.cvte.cn/student/common-components/frontend-components/easiclass-common/autoconfig.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "fs-extra": "^9.0.1",
+    "iconv-lite": "^0.6.3",
+    "nginx-conf": "^1.5.0"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  }
+}
