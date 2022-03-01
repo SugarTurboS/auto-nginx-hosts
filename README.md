@@ -1,16 +1,16 @@
-# @student/auto-config
+# auto-config
 
 ## 说明
 用于自动启动nginx及hosts
 
 ## 安装
 ```
-npm install @student/auto-config --@student:registry=http://nexus.gz.cvte.cn/nexus/repository/npm-group/
+npm install auto-config
 ```
 
 ## 使用方式
 ```
-const autoConfig = require('@student/auto-config');
+const autoConfig = require('auto-config');
 autoConfig({
   nginxPath: require('path').join(__dirname, 'nginx.conf'), // 配置需要注入的nginx conf地址
   key: 'teacher-web', // 项目唯一key，需要注入nginx时必传
