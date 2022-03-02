@@ -1,6 +1,6 @@
 {
   "name": "auto-nginx-hosts",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "auto inject nginx and hosts",
   "main": "src",
   "repository": {

@@ -22,7 +22,7 @@ autoNginxHosts({
 ```
 
 ## Demo
-详询 [Demo](https://github.com/deeWong/auto-nginx-hosts/demo)
+详询 [Demo](https://github.com/deeWong/auto-nginx-hosts/tree/master/demo)
 
 ## 说明
 * 1、目前仅支持注入nginx的server配置，不支持注入events、http等信息
