@@ -12,12 +12,17 @@ npm install auto-nginx-hosts
 ```
 const autoNginxHosts = require('auto-nginx-hosts');
 autoNginxHosts({
-  nginxPath: require('path').join(__dirname, 'nginx.conf'), // 配置需要注入的nginx conf地址
-  key: 'teacher-web', // 项目唯一key，需要注入nginx时必传
-  hosts: [{ ip: '127.0.0.1', domain: 'teacher-dev.test.seewo.com' }], // 配置注入注入的hosts
-  way: 'cover' // cover则使用覆盖源文件的方式，不传则使用新建文件方式
+  nginx: {
+    path: require("path").join(__dirname, "nginx.conf"), // nginx.conf文件路径
+    key: "demo", // 唯一key
+    isMerge: true, // 是否合并已有nginx配置
+  },
+  hosts: [{ ip: "127.0.0.1", domain: "www.demo.com" }],
 });
 ```
+
+## Demo
+详询 [Demo](https://github.com/deeWong/auto-nginx-hosts/demo)
 
 ## 说明
 * 1、目前仅支持注入nginx的server配置，不支持注入events、http等信息
