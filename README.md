@@ -1,35 +1,37 @@
 # auto-nginx-hosts
 
-## 说明
-用于自动启动nginx及hosts
+For automatic injection of nginx and hosts ！
 
-## 安装
+## Install
 ```
 npm install auto-nginx-hosts
 ```
 
-## 使用方式
+## Use
 ```
 const autoNginxHosts = require('auto-nginx-hosts');
 autoNginxHosts({
   nginx: {
-    path: require("path").join(__dirname, "nginx.conf"), // nginx.conf文件路径
-    key: "demo", // 唯一key
-    isMerge: true, // 是否合并已有nginx配置
+    path: require("path").join(__dirname, "nginx.conf"), // nginx.conf file url
+    key: "demo", // only key
+    isMerge: true, // merge existing nginx configurations
   },
   hosts: [{ ip: "127.0.0.1", domain: "www.demo.com" }],
 });
 ```
 
+## Author
+
+[dee](https://github.com/deeWong)
+
 ## Demo
-详询 [Demo](https://github.com/deeWong/auto-nginx-hosts/tree/master/demo)
+view [Demo](https://github.com/SugarTurboS/auto-nginx-hosts/tree/master/demo)
 
-## 说明
-* 1、目前仅支持注入nginx的server配置，不支持注入events、http等信息
-* 2、windows无法监听ctrl-c退出，所以无法恢复hosts及停止nginx，有需要可手动处理。
+## Description
+* 1、At present, it only supports the server configuration of nginx injection, and does not support the injection of events, HTTP and other information
+* 2、Windows cannot listen to ctrl-c exit, so it cannot recover hosts and stop nginx. It can be handled manually if necessary.
 
-## windows注意项
-* 1、开启Administrator用户（以管理员身份运行命令行CMD，输入以下命令：`net user administrator /active:yes`）
-* 2、给administrator用户设置一个密码。（控制面板 - 用户账户 - 管理账户 - 点击Administrator账户， 更改密码）
-* 3、打开cmd，运行以下命令`runas /env /savecred /user:Administrator cmd`，如果提示输入密码，请输入步骤2设置好的密码。等待命令打开另一个cmd后，表示成功记录密码。
-
+## windows notice
+* 1、Open the administrator user (run the command line CMD as an administrator and enter the following command：`net user administrator /active:yes`)
+* 2、Set a password for the administrator user. (control panel -> user account -> management account -> click administrator account，and change password)
+* 3、Run the following command `runas /env /savecred /user:Administrator cmd`. If prompted for a password, enter the password set in step 2. After waiting for the command to open another CMD, it indicates that the password is recorded successfully
